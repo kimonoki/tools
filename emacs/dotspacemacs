@@ -1,0 +1,14 @@
+
+
+
+
+;; org-mode
+;;  exclude directory from org-agenda
+(eval-when-compile (require 'cl))
+(setq org-agenda-files
+      (remove-if '(lambda (x)
+                    (string-match
+                     (concat "^" (regexp-quote (expand-file-name
+"/Folder")))
+                     x))
+                 org-agenda-files))
