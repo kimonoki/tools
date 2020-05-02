@@ -1,0 +1,9 @@
+## set different ZSH themes for different terminal apps
+
+if [ "$TERM_PROGRAM" = "iTerm.app" ]; then
+    ZSH_THEME="powerlevel10k/powerlevel10k"
+elif [ "$TERM" = "xterm-kitty" ]; then
+    ZSH_THEME="powerlevel10k/powerlevel10k"
+else
+    ZSH_THEME="blokkzh"
+fi
